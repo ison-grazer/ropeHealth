@@ -12,6 +12,8 @@
 		68031E7422D74AD500481B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68031E7222D74AD500481B46 /* Main.storyboard */; };
 		68031E7622D74ADA00481B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68031E7522D74ADA00481B46 /* Assets.xcassets */; };
 		68031E7922D74ADA00481B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 68031E7722D74ADA00481B46 /* LaunchScreen.storyboard */; };
+		68C30C2822DF51EE001E0DB0 /* newRopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68C30C2722DF51EE001E0DB0 /* newRopeController.swift */; };
+		68E8860E22E24029006791D5 /* updateRopeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68E8860D22E24029006791D5 /* updateRopeController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		68031E7522D74ADA00481B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68031E7822D74ADA00481B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68031E7A22D74ADA00481B46 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		68C30C2722DF51EE001E0DB0 /* newRopeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newRopeController.swift; sourceTree = "<group>"; };
+		68E8860D22E24029006791D5 /* updateRopeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = updateRopeController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,7 +42,7 @@
 		68031E6222D74AD500481B46 = {
 			isa = PBXGroup;
 			children = (
-				68031E6D22D74AD500481B46 /* ropeHealth */,
+				68031E6D22D74AD500481B46 /* RopeHealth */,
 				68031E6C22D74AD500481B46 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,17 +55,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		68031E6D22D74AD500481B46 /* ropeHealth */ = {
+		68031E6D22D74AD500481B46 /* RopeHealth */ = {
 			isa = PBXGroup;
 			children = (
 				68031E6E22D74AD500481B46 /* AppDelegate.swift */,
 				68031E7022D74AD500481B46 /* ViewController.swift */,
+				68C30C2722DF51EE001E0DB0 /* newRopeController.swift */,
 				68031E7222D74AD500481B46 /* Main.storyboard */,
 				68031E7522D74ADA00481B46 /* Assets.xcassets */,
 				68031E7722D74ADA00481B46 /* LaunchScreen.storyboard */,
 				68031E7A22D74ADA00481B46 /* Info.plist */,
+				68E8860D22E24029006791D5 /* updateRopeController.swift */,
 			);
-			path = ropeHealth;
+			path = RopeHealth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +143,8 @@
 			files = (
 				68031E7122D74AD500481B46 /* ViewController.swift in Sources */,
 				68031E6F22D74AD500481B46 /* AppDelegate.swift in Sources */,
+				68E8860E22E24029006791D5 /* updateRopeController.swift in Sources */,
+				68C30C2822DF51EE001E0DB0 /* newRopeController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
