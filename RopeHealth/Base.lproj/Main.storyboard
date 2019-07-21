@@ -154,7 +154,7 @@
                                 <rect key="frame" x="305" y="461" width="46" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lkg-zY-9FX">
@@ -188,7 +188,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="prY-Ya-mZG">
-                                <rect key="frame" x="160" y="616" width="94" height="44"/>
+                                <rect key="frame" x="81" y="627" width="94" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -197,7 +197,7 @@
                                     <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="doneBtn:" destination="Kw3-82-QPd" eventType="touchUpInside" id="Xm6-HF-04K"/>
+                                    <action selector="doneBtnPressed:" destination="Kw3-82-QPd" eventType="touchUpInside" id="FFx-gl-rVr"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="kisspng-silhouette-mountain-mesa-escalada-5b4bde400b7d28.3213185915316987520471" translatesAutoresizingMaskIntoConstraints="NO" id="3iA-kM-37e">
@@ -225,21 +225,30 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="t1W-O9-zHA"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBC-BV-T2R">
+                                <rect key="frame" x="242" y="627" width="94" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearBtnPressed:" destination="Kw3-82-QPd" eventType="touchUpInside" id="8TU-PV-Kr5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21731814742088318" green="0.79290783405303955" blue="0.57942169904708862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="bpy-eV-4Bl"/>
                     </view>
                     <connections>
-                        <outlet property="ButtonContainer" destination="O6O-x3-ayq" id="Une-0z-EIq"/>
-                        <outlet property="backButton" destination="0oM-JD-Q5X" id="LPv-uq-Xex"/>
+                        <outlet property="buttonContainer" destination="O6O-x3-ayq" id="J0q-Sy-Wmf"/>
                         <outlet property="dateOfFstUse" destination="NGq-yW-dt8" id="MPt-L6-bgS"/>
-                        <outlet property="doneBtn" destination="prY-Ya-mZG" id="aEv-Y5-HnA"/>
-                        <outlet property="enterNameField" destination="gCn-wn-Pfx" id="GfH-vz-N9J"/>
-                        <outlet property="footer" destination="3iA-kM-37e" id="OtQ-Wr-9mK"/>
+                        <outlet property="doneBtn" destination="prY-Ya-mZG" id="fT4-BU-kpO"/>
                         <outlet property="lenghtPrintBox" destination="hqj-PQ-gcs" id="TDB-Gs-eM2"/>
                         <outlet property="lenghtSlider" destination="jMk-Cn-Ppx" id="pzq-Ca-xtB"/>
-                        <outlet property="mainLabel" destination="jbL-l7-u4u" id="9PF-HD-dIU"/>
-                        <outlet property="nameLabel" destination="nLc-jI-T03" id="kpd-hw-l98"/>
+                        <outlet property="nameField" destination="gCn-wn-Pfx" id="GrI-K2-sdc"/>
                         <outlet property="widthPrintBox" destination="ZY5-zI-bf2" id="ybe-A8-u9I"/>
                         <outlet property="widthSlider" destination="alU-HE-FKA" id="OEN-XW-lfk"/>
                     </connections>
@@ -262,8 +271,18 @@
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.21731814739999999" green="0.79290783409999999" blue="0.57942169899999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tT8-62-iYU">
+                                <rect key="frame" x="253" y="653" width="94" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Clear">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Heavy fall" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BQn-5C-1Ch">
-                                <rect key="frame" x="33" y="560" width="345" height="72"/>
+                                <rect key="frame" x="33" y="573" width="345" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="25"/>
                                 <nil key="highlightedColor"/>
@@ -295,19 +314,12 @@
                                 <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-Xs-Anf">
-                                <rect key="frame" x="158" y="640" width="94" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
-                                <size key="titleShadowOffset" width="1" height="1"/>
-                                <state key="normal" title="Done">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mgr-58-HiQ">
-                                <rect key="frame" x="301" y="581" width="49" height="31"/>
+                                <rect key="frame" x="300" y="594" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="fallSwitch:" destination="WLx-JU-TMa" eventType="valueChanged" id="W3d-F3-o3V"/>
+                                </connections>
                             </switch>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Select rope" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LW8-aO-1kE">
                                 <rect key="frame" x="64" y="247" width="283" height="56"/>
@@ -332,6 +344,9 @@
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="terrainSelector:" destination="WLx-JU-TMa" eventType="editingDidEnd" id="Yva-mM-rfE"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Select type of climbing" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cJL-ON-jfJ">
                                 <rect key="frame" x="64" y="509" width="283" height="56"/>
@@ -341,10 +356,29 @@
                                 <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="19"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrB-Xs-Anf">
+                                <rect key="frame" x="52" y="652" width="94" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Bold" family="Optima" pointSize="18"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="doneBtn:" destination="WLx-JU-TMa" eventType="touchUpInside" id="kw4-zx-890"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21731814742088318" green="0.79290783405303955" blue="0.57942169904708862" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="yLZ-d5-wsQ"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonContainer" destination="cUd-DD-fGK" id="ZsB-D9-KBA"/>
+                        <outlet property="climbingSelector" destination="cJL-ON-jfJ" id="Aqv-Ey-CzX"/>
+                        <outlet property="dateSelector" destination="Rw5-fi-yVL" id="Xiq-oF-wvr"/>
+                        <outlet property="terrainSelector" destination="Ts2-z9-cpa" id="IfY-mk-cNu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zmH-71-NPL" sceneMemberID="firstResponder"/>
             </objects>
@@ -355,6 +389,6 @@
         <image name="kisspng-silhouette-mountain-mesa-escalada-5b4bde400b7d28.3213185915316987520471" width="800" height="800"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="G7b-Da-XkE"/>
+        <segue reference="t1W-O9-zHA"/>
     </inferredMetricsTieBreakers>
 </document>

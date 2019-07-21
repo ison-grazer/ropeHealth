@@ -7,25 +7,45 @@
 //
 
 import UIKit
+import CoreData
 
 class newRopeController: UIViewController {
 
-    @IBOutlet weak var mainLabel: UILabel!
-    @IBOutlet weak var buttonContainer: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var enterNameField: UITextField!
     @IBOutlet weak var dateOfFstUse: UITextField!  //prompts date-picker
-    
+    @IBOutlet weak var buttonContainer: UIImageView!
     
     @IBOutlet weak var lenghtSlider: UISlider!
     @IBOutlet weak var lenghtPrintBox: UITextField!
     
     @IBOutlet weak var widthSlider: UISlider!
     @IBOutlet weak var widthPrintBox: UITextField!
+    
     @IBOutlet weak var doneBtn: UIButton!
     
-    @IBOutlet weak var backButton: UIButton!
-    @IBOutlet weak var footer: UIImageView!
+    @IBOutlet var nameField: UITextField!
+    
+    
+    
+    @IBAction func doneBtnPressed(_ sender: UIButton) {
+        
+    }
+    var names: [String] = []
+    
+    @IBAction func clearBtnPressed(_ sender: Any) {
+        nameField.text = ""
+        dateOfFstUse.text = ""
+        lenghtPrintBox.text = ""
+        widthPrintBox.text = ""
+    }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        buttonContainer.layer.cornerRadius = 20 //rounds corners
+        dateOfFstUse.inputView = datePicker //when interacting with bar
+ 
+        
+        // Do any additional setup after loading the view.
+    }
+    
     
     @IBAction func lengthSliderChanged(_ sender: UISlider) { //in m
         let currentValue = Int(sender.value)
@@ -61,16 +81,10 @@ class newRopeController: UIViewController {
         formatter.dateStyle = .medium
         formatter.timeStyle = .none
             
-        return formatter //smthng is off
+        return formatter
     }()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        buttonContainer.layer.cornerRadius = 20 //rounds corners
-
-        dateOfFstUse.inputView = datePicker //when interacting with bar
-        // Do any additional setup after loading the view.
-    }
+    
     
     @objc func datePickerChanged(_ sender: UIDatePicker){   //creates a string from the data from method
         dateOfFstUse.text = dateFormatter.string(from: sender.date)
@@ -78,9 +92,6 @@ class newRopeController: UIViewController {
    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){ //when tapping outside the field it closes
       view.endEditing(true)
-    }
-    @IBAction func doneBtn(_ sender: UIButton) {
-        //will store data, show entry ok/edit then send to main page or "edit existing"
     }
 }
 
